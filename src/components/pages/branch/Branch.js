@@ -18,9 +18,9 @@ const Branch = () => {
 
   const renderItem = ({ item }) => <Whatsapp_card item={item} />;
   const loadMore = () => {
-    if(!loading && branch.length>0){
+    if(!loading && branch && branch.length>0){
 
-      if (!loading && branch.length % resultPerpage === 0) {
+      if (!loading && branch?.length % resultPerpage === 0) {
         setPage((prevPage) => prevPage + 1);
       }
     }
